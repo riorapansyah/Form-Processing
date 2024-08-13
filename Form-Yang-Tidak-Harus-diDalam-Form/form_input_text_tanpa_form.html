@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Username: <input type="text" id="username" /></p>
+    <p><button id="copyData">Copy Data</button></p>
+    <p>Hasil: <input type="text" id="hasil" /></p>
+    <script>
+      let copyDataNode = document.getElementById("copyData");
+      let usernameNode = document.getElementById("username");
+      let hasilNode = document.getElementById("hasil");
+
+      const diProses = () => {
+        hasilNode.value = usernameNode.value;
+        hasilNode.disabled = "true";
+      };
+      copyDataNode.addEventListener("click", diProses);
+    </script>
+  </body>
+</html>

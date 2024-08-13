@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="formKu" name="formKu" method="get" action="proses.php">
+      <p>Username: <input type="text" name="username" id="username" /></p>
+      <p>
+        <input type="submit" name="submit" id="submit" value="Submit Form" />
+      </p>
+    </form>
+    <script>
+      let formNode = document.getElementById("formKu");
+      let usernameNode = document.getElementById("username");
+
+      const diProses = (e) => {
+        e.preventDefault();
+        console.log(usernameNode.form);
+        console.log(usernameNode.name);
+        console.log(usernameNode.type);
+        console.log(usernameNode.autofocus);
+        console.log(usernameNode.value);
+        console.log(usernameNode.maxLength);
+        console.log(usernameNode.size);
+        console.log(usernameNode.readOnly);
+        console.log(usernameNode.placeholder);
+      };
+      formNode.addEventListener("submit", diProses);
+    </script>
+  </body>
+</html>
