@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Fakultas:
+      <select name="fakultas" id="fakultas">
+        <option value="FASILKOM">FASILKOM</option>
+        <option value="Ekonomi">Ekonomi</option>
+        <option value="FMIPA">FMIPA</option>
+      </select>
+      Jurusan :
+      <select name="jurusan" id="jurusan"></select>
+    </p>
+    <br /><br />
+    <p>Pilihan Anda : <span id="hasil"></span></p>
+    <script>
+      let fakultasNode = document.getElementById("fakultas");
+      let jurusanNode = document.getElementById("jurusan");
+      let hasilNode = document.getElementById("hasil");
+      const tampilkanJurusan = () => {
+        console.log(fakultasNode);
+        console.log(jurusanNode);
+        console.log(hasilNode);
+      };
+
+      fakultasNode.addEventListener("change", tampilkanJurusan);
+    </script>
+  </body>
+</html>

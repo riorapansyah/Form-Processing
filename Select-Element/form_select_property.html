@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Belajar:
+      <select name="belajar" id="belajar">
+        <option value="HTML" id="belajarHTML">Belajar HTML</option>
+        <option value="CSS" id="belajarCSS">Belajar CSS</option>
+        <option value="JavaScript" id="belajarJS">Belajar JavaScript</option>
+      </select>
+    </p>
+    <p><button id="periksa">Periksa</button></p>
+    <script>
+      let periksaNode = document.getElementById("periksa");
+      let belajarNode = document.getElementById("belajar");
+
+      const diPeriksa = () => {
+        console.log(belajarNode);
+
+        console.log(belajarNode.name);
+        console.log(belajarNode.length);
+        console.log(belajarNode.value);
+        console.log(belajarNode.selectedIndex);
+        console.log(belajarNode.options);
+        console.log(belajarNode.selectedOptions);
+        console.log(belajarNode[0]);
+        console.log(belajarNode[1]);
+        console.log(belajarNode[2]);
+      };
+
+      periksaNode.addEventListener("click", diPeriksa);
+    </script>
+  </body>
+</html>
